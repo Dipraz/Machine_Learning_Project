@@ -22,12 +22,12 @@ def predict_datapoint():
     else:
         data=CustomData(
             gender=request.form.get('gender'),
-            race/ethnicity=request.form.get('ethnicity'),
-            parental_level_of_education=request.form.get('parental level of education'),
+            race_ethnicity=request.form.get('ethnicity'),
+            parental_level_of_education=request.form.get('parental_level_of_education'),
             lunch=request.form.get('lunch'),
-            test preparation course=request.form.get('test preparation course'),
-            reading score=float(request.form.get('writing score')),
-            writing score=float(request.form.get('reading score'))
+            test_preparation_course=request.form.get('test_preparation_course'),
+            reading_score=float(request.form.get('writing_score')),
+            writing_score=float(request.form.get('reading_score'))
 
         )
         pred_df=data.get_data_as_data_frame()
@@ -42,4 +42,4 @@ def predict_datapoint():
     
 
 if __name__=="__main__":
-    app.run(host="0.0.0.0",debug=True)
+    app.run(host="0.0.0.0") 
